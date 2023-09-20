@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+.random-news {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  &__banner {
+    width: 870px;
+    height: 400px;
+    position: relative;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    position: absolute;
+    top: 250px;
+    margin-left: 32px;
+    color: $light;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  &__row {
+    display: flex;
+    gap: 27px;
+    margin-left: 32px;
+    color: $grey;
+    position: absolute;
+    top: 350px;
+  }
+  &__description {
+    max-width: 270px;
+    font-size: 18px;
+    line-height: 180%;
+    color: $grey;
+  }
+}

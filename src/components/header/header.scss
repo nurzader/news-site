@@ -1,0 +1,12 @@
+@import '../../styles//variables.scss';
+
+.header {
+    margin-bottom: 50px;
+
+    a {
+        font-size: 24px;
+        font-weight: 500;
+        color: $dark;
+        cursor: pointer;
+    }
+}

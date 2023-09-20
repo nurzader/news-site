@@ -46,3 +46,9 @@ input::-webkit-inner-spin-button {
   margin: 0 auto;
   padding: 30px 15px;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

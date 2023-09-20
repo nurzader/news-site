@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.latest-news {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 60px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 270px;
+  }
+
+  &__banner {
+    width: 100%;
+    height: 176px;
+    border-radius: 8px;
+  }
+
+  &__title {
+    color: $dark;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__row {
+    display: flex;
+    gap: 16px;
+    color: $grey;
+  }
+}

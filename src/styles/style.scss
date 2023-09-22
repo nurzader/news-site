@@ -50,5 +50,6 @@ input::-webkit-inner-spin-button {
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 50px;
 }

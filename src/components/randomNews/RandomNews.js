@@ -4,7 +4,7 @@ import NewsService from '../../services/NewsService';
 import Spinner from '../spinner/Spinner';
 
 const RandomNews = () => {
-  const [news, setNews] = useState({});
+  const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

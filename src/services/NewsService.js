@@ -13,24 +13,15 @@ const NewsService = () => {
 
   const getNew = async (id) => {
     const response = await getResource(`${_URL}/${id}`);
-    return _transformNew(response);
+    return response;
   };
 
-  const _transformNew = (news) => {
-    return {
-      id: news.id,
-      author: news.author,
-      country: news.country,
-      link: news.link,
-      topic: news.topic,
-      title: news.title,
-      summary: news.summary,
-      published_date: news.published_date,
-      img_url: news.img_url,
-    };
+  const getNews = async () => {
+    const response = await getResource(`${_URL}?page=1&limit=8`);
+    return response;
   };
 
-  return { getNew };
+  return { getNew, getNews };
 };
 
 export default NewsService;

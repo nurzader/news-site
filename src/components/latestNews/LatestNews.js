@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './latestNews.scss';
 import NewsService from '../../services/NewsService';
 import Skeleton from '../skeleton/Skeleton';
+import { Link } from 'react-router-dom';
 
 const LatestNews = () => {
   const [newsList, setNewsList] = useState([]);
@@ -29,7 +30,7 @@ const LatestNews = () => {
 
   return (
     <div className="latest-news">
-      <h1>Последние новости</h1>
+      <h1>Latest news</h1>
       <ul className="latest-news__list">
         {loading ? (
           [...new Array(8)].map((_, index) => <Skeleton key={index} />)
@@ -37,17 +38,16 @@ const LatestNews = () => {
           <>
             {newsList.map((news) => (
               <li key={news.id} className="latest-news__item">
-                <img className="latest-news__banner" src={news.img_url} alt="banner" />
-                <p className="latest-news__title">{news.title}</p>
-                <div className="latest-news__row">
-                  <span>{news.published_date} </span>
-                  <span>{news.country}</span>
-                </div>
+                <Link to={`/news/${news.id}`}>
+                  <img className="latest-news__banner" src={news.img_url} alt="banner" />
+                  <span className="latest-news__title">{news.title}</span>
+                </Link>
               </li>
             ))}
           </>
         )}
       </ul>
+      <button className="latest-news__button">More news</button>
     </div>
   );
 };

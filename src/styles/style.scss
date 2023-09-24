@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import './variables.scss';
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -52,4 +53,60 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   justify-content: center;
   gap: 50px;
+}
+
+.news-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h3 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  &__backLink {
+    align-self: end;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  &__top {
+    color: $grey;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  &__link {
+    color: rgb(21, 61, 209);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.5px;
+      width: 400px;
+    }
+  }
+
+  &__banner {
+    width: 700px;
+    align-self: center;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
 }
